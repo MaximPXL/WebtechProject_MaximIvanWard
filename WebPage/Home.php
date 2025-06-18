@@ -10,15 +10,26 @@
   <!-- Top black bar -->
   <div class="top-bar">
     <span class="logo">Purple & Green Store</span>
-    <a href="<?php echo is_logged_in() ? 'account.php' : 'Login.php'; ?>" class="account-link">Account</a>
-    <a href="<?php echo is_logged_in() ? 'store.php' : 'Login.php'; ?>" class="cart-link">Cart</a>
+    <a href="<?php echo is_logged_in() ? 'Account.php' : 'Login.php'; ?>" class="account-link">Account</a>
+    <a href="cart.php" class="cart-link">Cart</a>
+    <?php
+    if (is_logged_in()) {
+        $pdo = get_pdo();
+        $stmt = $pdo->prepare("SELECT rol FROM gebruikers WHERE gebruikersnaam = ?");
+        $stmt->execute([$_SESSION['username']]);
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
+        if ($user && $user['rol'] === 'admin') {
+            echo '<a href="admin.php" class="admin-link" style="color:#39ff14;">Admin</a>';
+        }
+    }
+    ?>
   </div>
   <!-- Gray navigation bar -->
   <header>
     <nav>
-      <a href="home.php">Home</a>
-      <a href="store.php">Shop</a>
-      <a href="Contact.php">Contact</a>
+            <a href="Home.php">Home</a>
+            <a href="store.php">Shop</a>
+            <a href="Contact.php">Contact</a>
     </nav>
   </header>
   <div class="container">
