@@ -40,7 +40,7 @@ if (isset($_SESSION['login_error'])) {
         <h4 for="password">Password:</h4>
         <input type="password" id="password" name="password" required>
 
-        <button type="submit">Submit</button>
+        <button type="submit">Login</button>
       </form>
     </div>
     <button type="button" class="signup-btn" onclick="window.location.href='SignUp.php'">Sign up</button>
