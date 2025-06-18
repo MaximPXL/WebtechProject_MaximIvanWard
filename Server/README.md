@@ -13,7 +13,7 @@ This README explains how to use the HTTP Webserver for our project
   - here you will find an IPv4-adress, this is the IP-adress we need
 
 - now for the Webserver:
-  - go to your folder containing the php filles
+  - go to your folder containing the php filles (you can find these filles in the folder Webpage)
   - open cmd from this folder
   - then you type: php -S <your IP-adress>:80
   - this wil start your server, now you go to the external device
