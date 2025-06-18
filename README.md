@@ -1,12 +1,14 @@
 # WebtechProject_MaximIvanWard
 Eind project webtech van Maxim Ivan en Ward (groep 2)
-To run u :
+To run u need to install php 
 
-git clone https://github.com/MaximPXL/WebtechProject_MaximIvanWard.git
+Download all the files into a folder with:
 
-U need to install php and run a php server with:
+$ git clone https://github.com/MaximPXL/WebtechProject_MaximIvanWard.git
 
-php -S localhost:8000 Home.php
+Now open command prompt in the folder and run:
+
+$ php -S localhost:8000 Home.php
 
 Now, open your browser and go to:
 
