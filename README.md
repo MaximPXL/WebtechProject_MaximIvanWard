@@ -18,4 +18,4 @@ aangezien de inventaris van onze artikkelen moet worden bijgehouden, alsook de a
 Hoe start je nu deze website?
 
 - Ga eerst naar de folder: Server
-  - Volg hier de README.md file om de Webserver op te zetten.
+  - Volg hier de README.md file om de Webserver en als gevolg de Website op te zetten.
