@@ -43,4 +43,25 @@ INSERT INTO producten (naam, maat, aantal, prijs_per_stuk) VALUES
 ;
 ");
 
-echo "Database and tables created, products filled!";
+// Insert admin user (username: admin, password: admin, rol: admin)
+$hashed_password = password_hash('admin', PASSWORD_DEFAULT);
+$insert_admin = $pdo->prepare("
+INSERT OR IGNORE INTO gebruikers 
+(gebruikersnaam, wachtwoord, email, telefoon, land, provincie, postcode, straatnaam, huinummer, bus, rol) 
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+");
+$insert_admin->execute([
+    'admin',
+    $hashed_password,
+    'admin@admin.com',
+    '0000000000',
+    'Adminland',
+    'Adminstate',
+    '0000',
+    'Adminstreet',
+    '1',
+    '',
+    'admin'
+]);
+
+echo "Database and tables created, products and admin user filled!";
