@@ -8,7 +8,7 @@ $ git clone https://github.com/MaximPXL/WebtechProject_MaximIvanWard.git
 
 Now open command prompt in the folder and run:
 
-$ php -S localhost:8000 Home.php
+$ php -S localhost:8000 
 
 Now, open your browser and go to:
 
